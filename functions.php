@@ -26,6 +26,8 @@
  * @since 1.0.1
  */
 if ( !defined ( 'MELODY_THEME_VER' ) ) { define ( 'MELODY_THEME_VER', time() ); }
+if ( !defined ( 'MELODY_THEME_INC' ) ) { define ( 'MELODY_THEME_INC', 
+	get_template_directory_uri() . '/inc/'); }
 // FAST LOADER References ( find @#id in DocBlocks )
 // ------------------------- Actions ---------------------------
 // ID#
