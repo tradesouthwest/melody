@@ -28,6 +28,7 @@ Demo at: https://melody.tradesnet.us/
 ## Change LOg
 1.0.0
 * initial release Nov 2023
+
 1.0.1
 * fix menu margins
 * fix menu items spacing
