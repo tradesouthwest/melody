@@ -46,6 +46,7 @@ add_action( 'melody_blog_date',      'melody_blog_date_and_comment_count' );
 // A8
 add_action( 'inner_article_excerpt', 'melody_inner_article_excerpt' );
 
+
 // ------------------------- Filters ---------------------------
 // ID#
 // F1
@@ -121,7 +122,7 @@ if ( ! function_exists( 'melody_theme_setup' ) ) :
 		// register new phone-landscape featured image size. @width, @height, and @crop
 		add_image_size( 'melody-featured', 320, 300, false);  
 		add_image_size( 'melody-excerpt', 150, 150, true);   
-		
+		add_post_type_support( 'page', 'excerpt' );
 		add_theme_support( 'custom-background', 
 			array( 
 		   'default-color'      => '#fcfcfc',
@@ -225,7 +226,24 @@ function melody_theme_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => __( 'Landing Page', 'melody' ),
+			'id'            => 'sidebar-landing',
+			'description'   => __( 'Add widgets to show in bottom of landing page.', 'melody' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 } 
+
+/**
+ * Add files and theme registry for widgets
+ */
+require get_template_directory() . '/inc/class-melody-twowide-widget.php';
+require get_template_directory() . '/inc/class-melody-threewide-widget.php';
 
 /**
  * Adding files here to apply to the following functions below 

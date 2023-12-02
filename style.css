@@ -3,7 +3,7 @@ Theme Name:  Melody
 Theme URI:   https://classicpress-themes/
 Author:      Tradesouthwest
 Author URI:  https://tradesouthwest.com/
-Description: melody is a grid based theme templated for general website use. Demo at https://melody.tradesnet.us/
+Description: Melody is a grid based theme templated for general website use. Demo at https://melody.tradesnet.us/
 Requires PHP: 7.4
 Requires CP:  1.4
 Version:     1.0.1
@@ -17,16 +17,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 /* === CSS Index ===
- * I - Page Model 
- * II - Content Elements 
+ * *************************
+ * I   - Page Model 
+ * II  - Content Elements 
  * III - Article Content 
- * IV - Navigation Elements 
- * V - WP Requires 
- * VI - Media Queries 
+ * IV  - Navigation Elements 
+ * V   - WP Requires 
+ * VI  - Media Queries
+ * ************************** 
  */
+
 /* ************************************************** I - Page Model */ 
-/* For demo - remove at release */
-a, a:visited{color: royalblue}
 body {
     font-size: 16px;
     margin: 0;
@@ -50,24 +51,21 @@ body {
 .parent {
     display: grid;
     grid-template-columns: minmax(0, 4fr); 
-
     margin-right:auto;
     margin-left:auto;
     margin-top: 0;
-    /*
-    grid-template-columns: 1fr minmax(0, 3fr);*/
 }
 body, div, main, article, section, header, footer, nav, aside, span {
     box-sizing: border-box;
 }
-
 .wide-container,
 .melody-heading-meta{
     display: grid;
     grid-template-columns: 1fr;
     width:100%;
 }
-.page-template-three-columns .second-child{
+.page-template-three-columns .second-child,
+.melody-html-widget-three .mldywidget-third-child{
     width: auto;
 } 
 .second-child{
@@ -88,8 +86,8 @@ body, div, main, article, section, header, footer, nav, aside, span {
 .inner-wide-header{
     display: flex;
     flex-direction: column;
-min-height: 1px;
-  width: 100%;
+    min-height: 1px;
+    width: 100%;
 } 
 .inner-wide-header > .hsection{
     flex: 1 1 100%;
@@ -119,6 +117,7 @@ min-height: 1px;
 .padded{
    padding: .825em 1.68em
 }
+
 /* ************************************************** II - Content Elements */
 /* Avoid text overflows */
 p, h1, h2, h3, h4, h5, h6 {
@@ -130,7 +129,7 @@ h1, h2, h3, h4, h5, h6{
     padding:0;
     color: #48494a
 }
-h1 {
+  h1 {
     font-size: 2em;
   }
   h2 {
@@ -153,7 +152,6 @@ img, picture, video, canvas, svg {
     border-style: none;
     height: auto;
     max-width: 100%;
-
 }
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
@@ -198,6 +196,7 @@ table th,
 table td{
     padding:2px 3px;
 }
+
 /* ************************************************** II - Article Elements */
 article.page .wp-caption img,
 article.post .wp-caption img{
@@ -247,12 +246,8 @@ article.post .wp-caption img{
 }
 .single .linked-attachment-container{
    box-shadow:none;
-   border: 0; /*
-   background: transparent; 
-   margin-bottom: 1.4em; */
-    width:100%;
+   border: 0;
 }
-    /*background: linear-gradient( #fafafa, #fdfdfd, #f9f9f9 );*/
 .blog .home-excerpt-thumb{
     display: inline-block;
     position: relative;
@@ -261,7 +256,6 @@ article.post .wp-caption img{
     width: 7em;
     height: 7em;
 }
-
 article.page .wp-caption img,
 article.post .wp-caption img{
     max-width: 75%;
@@ -298,7 +292,6 @@ article.post .wp-caption img{
     position:relative;
     top: 0;
     left: 32%;
-
 }
 .back_to_top-show {
     display: flex;
@@ -307,7 +300,35 @@ article.post .wp-caption img{
 .site-copyright-section{
     width: 50%;
 }
-
+/* save for theme mods */
+.melody-landing-wrapper .post-title{
+    color:inherit;
+}
+.landing-attachment-container img{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+.melody-landing-excerpt:after,
+.melody-landing-footing:after{
+    content: " ";
+    display: table;
+    clear: both;
+    height: 1px;
+    width: 100%;
+}
+.melody-html-widget-three,
+.melody-html-widget-one,
+.melody-html-widget-two{
+    overflow: hidden;
+    white-space: normal;
+    display:   grid;
+    width:     100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    word-wrap: anywhere;
+}
 
 /* ************************************************** IV - Navigation Elements */  
 .bfi-date:before,
@@ -351,7 +372,7 @@ article.post .wp-caption img{
     border-bottom: thin dotted #000
 }
 .navbar-toggle{
-    visibility: visible;
+    display: flex;
     margin-left: 2em;
     cursor: pointer;
 }  
@@ -366,40 +387,34 @@ article.post .wp-caption img{
 }
 .page-nav-wrapper ul li{
     list-style-type: none;
-    
 }
 .page-nav-wrapper a{
     text-decoration: none;
 }
 .menu-item-has-children{
-    margin-top: .5em;
+    margin-top: 0;
 }
-/* ************************************************** V - WP Requiires   */  
 
+/* ************************************************** V - WP Requiires   */  
 .alignleft {
 	float: left;
 	margin: 0.375em 1.75em 1.75em 0;
 }
-
 .alignright {
 	float: right;
 	margin: 0.375em 0 1.75em 1.75em;
 }
-
 .aligncenter {
 	clear: both;
 	display: block;
 	margin: 0 auto 1.75em;
 }
-
 blockquote.alignleft {
 	margin: 0.3157894737em 1.4736842105em 1.473684211em 0;
 }
-
 blockquote.alignright {
 	margin: 0.3157894737em 0 1.473684211em 1.4736842105em;
 }
-
 blockquote.aligncenter {
 	margin-bottom: 1.473684211em;
 }
@@ -419,28 +434,24 @@ blockquote.aligncenter {
 .widget.widget_calendar table {
 	margin: 0;
 }
-
 .widget_calendar td,
 .widget_calendar th {
 	line-height: 2.5625;
-	padding: 0 3px;
+	padding: 0 4px;
 	text-align: center;
     border-left: 1px solid #ddd;
     border-top: 1px solid #ddd;
 }
-
 .widget_calendar caption {
 	font-weight: 900;
 	margin-bottom: 1.75em;
 }
-
 .widget_calendar tbody a {
 	background-color: #007acc;
 	color: #fff;
 	display: block;
 	font-weight: 700;
 }
-
 .widget_calendar tbody a:hover,
 .widget_calendar tbody a:focus {
 	background-color: #686868;
@@ -456,23 +467,19 @@ blockquote.aligncenter {
 	margin: 0 0.1875em 0.4375em 0;
 	padding: 0.5625em 0.4375em 0.5em;
 }
-
 .tagcloud ul {
 	list-style-type: none;
 	margin-left: 0;
 }
-
 .tagcloud ul li {
 	display: inline-block;
 }
-
 .tagcloud a:hover,
 .tagcloud a:focus {
 	border-color: #007acc;
 	color: #007acc;
 	outline: 0;
 }
-
 .sticky-post {
 	color: #686868;
 	display: block;
@@ -484,16 +491,13 @@ blockquote.aligncenter {
 	margin-bottom: 0.5384615385em;
 	text-transform: uppercase;
 }
-
 .comments-area {
 	margin: 0 7.6923% 3.5em;
 }
-
 .comment-list + .comment-respond,
 .comment-navigation + .comment-respond {
 	padding-top: 1.75em;
 }
-
 .comments-title,
 .comment-reply-title {
 	border-top: 4px solid #1a1a1a;
@@ -504,16 +508,13 @@ blockquote.aligncenter {
 	line-height: 1.3125;
 	padding-top: 1.217391304em;
 }
-
 .comments-title {
 	margin-bottom: 1.217391304em;
 }
-
 .comment-list {
 	list-style: none;
 	margin: 0;
 }
-
 .form-allowed-tags code {
 	font-family: Inconsolata, monospace;
 }
@@ -526,24 +527,20 @@ video {
 	max-width: 100%;
 	vertical-align: middle;
 }
-
 p > embed,
 p > iframe,
 p > object,
 p > video {
 	margin-bottom: 0;
 }
-
 .wp-caption {
 	margin-bottom: 1.75em;
 	max-width: 100%;
 }
-
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 0;
 }
-
 .wp-caption .wp-caption-text {
 	color: #686868;
 	font-size: 13px;
@@ -552,56 +549,9 @@ p > video {
 	line-height: 1.6153846154;
 	padding-top: 0.5384615385em;
 }
-
-.gallery {
-	margin: 0 -1.1666667% 1.75em;
-}
-
-.gallery-item {
-	display: inline-block;
-	max-width: 33.33%;
-	padding: 0 1.1400652% 2.2801304%;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
-}
-
-.gallery-columns-1 .gallery-item {
-	max-width: 100%;
-}
-
-.gallery-columns-2 .gallery-item {
-	max-width: 50%;
-}
-
-.gallery-columns-4 .gallery-item {
-	max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-	max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
-}
-
 .gallery-icon img {
 	margin: 0 auto;
 }
-
 .gallery-caption {
 	color: #686868;
 	display: block;
@@ -611,7 +561,6 @@ p > video {
 	line-height: 1.6153846154;
 	padding-top: 0.5384615385em;
 }
-
 .gallery-columns-6 .gallery-caption,
 .gallery-columns-7 .gallery-caption,
 .gallery-columns-8 .gallery-caption,
@@ -621,11 +570,10 @@ p > video {
 
 /* ************************************************** VI - Media Queries */  
 @media screen and ( min-width: 1440px ){
-
-.wrapper{
-    max-width: 1480px;
-    margin: 0 auto;
-   }
+    .wrapper{
+        max-width: 1480px;
+        margin: 0 auto;
+    }
 } 
 
 @media screen and ( min-width: 980px ){
@@ -636,7 +584,6 @@ p > video {
     }
     .page-template-three-columns .parent{
         grid-template-columns: 1fr minmax(0, 3fr) 1fr;
-
     }
     .first-child{
         margin-right: 1px;  
@@ -651,6 +598,28 @@ p > video {
     .third-child.padded{
         padding-left: 1.75em
     } 
+
+    .melody-html-widget-two{
+        grid-template-columns: 1fr minmax(0, 1fr);
+    }
+    .melody-html-widget-three{
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .melody-html-widget-two .mldywidget-first-child{
+        word-wrap: anywhere;
+    }
+    .melody-html-widget-two .mldywidget-second-child{
+        word-wrap: anywhere;
+    }
+    .melody-html-widget-three .mldywidget-first-child,
+    .melody-html-widget-three .mldywidget-second-child,
+    .melody-html-widget-three .mldywidget-third-child{
+        flex: 1 1 100%;
+    }
     .inner-wide-header{
         flex-direction: row;
         justify-content: center;
@@ -676,14 +645,12 @@ p > video {
         font-weight: 400;
     }
     .navbar-toggle{
-        visibility: hidden;
+        display: none;
     }
-
     .blog .attachment-thumbnail.size-thumbnail{
         max-width: initial;
         width: initial;
     }
-
     .inner-article-content{
         font-size: 100%;
     }

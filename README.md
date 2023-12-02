@@ -26,6 +26,15 @@ Demo at: https://melody.tradesnet.us/
 - Text alignment control
 
 ## Change LOg
-1.0.1
+1.0.0
 * initial release Nov 2023
-
+1.0.1
+* fix menu margins
+* fix menu items spacing
+* add table styles
+* three-columns html
+* page html class
+* landing & landing-content tmplts
+* mel-theme-mod
+* customizer
+* styles

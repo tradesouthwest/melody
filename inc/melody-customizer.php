@@ -74,6 +74,25 @@ function melody_register_theme_customizer_setup($wp_customize)
 			'center'  => 'Center'
     		)
 	));
+	$wp_customize->add_setting( 'melody_landing_title', array(
+		'default' => 'inline-block',
+		'capability' => 'edit_theme_options',
+		'transport' => 'refresh'
+	));
+	$wp_customize->add_control( 'melody_landing_title', array(
+		'label'       => __( 'Heading Settings for Landing-page', 'melody' ),
+		'section'     => 'melody_layout',
+		'settings'    => 'melody_landing_title',
+		'description' => __( 'Choose how you would like to display post title of landing page.', 'melody'),
+		'type'        => 'select',
+    	'choices'     => array(
+        	'inline-block' => 'Inline block',
+        	'block'        => 'Block',
+			'flex'         => 'Flex',
+        	'inline-flex'  => 'Inline flex',
+			'none'         => 'None'
+    		)
+	));
 
 	/* 
 	 * ********************** Colors **********************
