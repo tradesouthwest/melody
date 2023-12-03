@@ -361,14 +361,21 @@ function melody_blog_date_and_comment_count(){
  * @since 1.0.1
  * @return HTML
  */
-function melody_inner_article_excerpt(){
-
- 	$enumb = get_theme_mod( 'melody_excerpt_length', 50 );
- 	$excerpt = wp_trim_words( get_the_content(), 
-			absint( $enumb ), '' );
-
- 	echo $excerpt . ' ' . '<a href="'.get_the_permalink().'">' 
- 		. esc_html__('Read link', 'melody' ) . '</a>';
+function melody_inner_article_excerpt()
+{
+	if( get_theme_mods() ) {
+ 	$enumb   = get_theme_mod( 'melody_excerpt_length', '50' );
+	$readm   = get_theme_mod( 'melody_readon_link', 'Read Link' );
+ 	$excerpt = wp_trim_words( get_the_content(), absint( $enumb ), '' );
+	$reads   = sprintf( __( '%s', 'melody' ), 
+					    esc_html( $readm ? $readm : '...' ) 
+					);
+ 	echo $excerpt . ' ' . '<a href="'.get_the_permalink().'" title="'. esc_attr($reads) .'">' 
+		 . esc_html( $reads )  . '</a>';
+	} else {
+		echo wp_trim_words( get_the_content(), absint( 50 ), '' ) 
+			 . ' ' . '<a href="'.get_the_permalink().'" title="read more">...</a>';
+	}
 }
 
 /**

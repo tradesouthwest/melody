@@ -3,7 +3,7 @@ Theme Name:  Melody
 Theme URI:   https://classicpress-themes/
 Author:      Tradesouthwest
 Author URI:  https://tradesouthwest.com/
-Description: Melody is a grid based theme templated for general website use. Demo at https://melody.tradesnet.us/
+Description: Melody is a grid based theme templated for general website use.Melody is a ClassicPress theme designed to approach a concept on how to make page building a more user-friendly and SEO (page speed load time) friendly process. Page builders take up a lot of bandwidth and are sometimes filled with lots of excessive code that just slows down your website. So we attempt to eleminate over-bloat of code by using built in components of WordPress that are already part of its core functionality. You can use a custom Landing page template to arrange widget on the page which help in building typical page sections, without knowing code. Demo at https://melody.tradesnet.us/
 Requires PHP: 7.4
 Requires CP:  1.4
 Version:     1.0.1
@@ -227,6 +227,9 @@ article.post .wp-caption img{
     font-size: 1.644em;
     font-weight: 400;
 }
+.melody-post-heading a{
+    text-decoration:none;
+}
 .blog .attachment-melody-excerpt{
     height: 150px;
     margin-left: 1.088em;
@@ -310,6 +313,14 @@ article.post .wp-caption img{
     margin: 0 auto;
     display: flex;
 }
+.melody-landing-excerpt{
+    display: block;
+    width: 91.5%;
+    margin: 0 auto 0 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background: #dff;
+}
 .melody-landing-excerpt:after,
 .melody-landing-footing:after{
     content: " ";
@@ -346,7 +357,7 @@ article.post .wp-caption img{
 }
 .bfi-date:before{
     left: -.75em;
-    top: 1.24em;
+    top: 1.04em;
 }
 .pagination-nav{
     width: 100%;

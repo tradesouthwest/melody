@@ -93,6 +93,37 @@ function melody_register_theme_customizer_setup($wp_customize)
 			'none'         => 'None'
     		)
 	));
+	$wp_customize->add_setting( 
+		'melody_excerpt_length', array(
+		'default'    => '50',
+		'capability' => 'edit_theme_options',
+		'transport'  => $transport
+	));
+	$wp_customize->add_control( 'melody_excerpt_length', array(
+		'label'   => __( 'Excerpt Length', 'melody' ),
+		'section'  => 'melody_layout',
+		'settings'  => 'melody_excerpt_length',
+		'type'       => 'number',
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 9999
+        ),
+		'description' => __( 'Set number of words you want to display on blog roll.', 'melody')
+	));
+	// melody_readon_link
+	$wp_customize->add_setting( 
+		'melody_readon_link', array(
+		'default'    => '',
+		'capability' => 'edit_theme_options',
+		'transport'  => $transport
+	));
+	$wp_customize->add_control( 'melody_readon_link', array(
+		'label'   => __( 'Excerpt Length', 'melody' ),
+		'section'  => 'melody_layout',
+		'settings'  => 'melody_readon_link',
+		'type'       => 'text',
+		'description' => __( 'Text to show as Read More Link after excerpts.', 'melody')
+	));
 
 	/* 
 	 * ********************** Colors **********************
