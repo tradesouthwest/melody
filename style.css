@@ -408,17 +408,21 @@ article.post .wp-caption img{
 
 /* ************************************************** V - WP Requiires   */  
 .alignleft {
-	float: left;
+    display: flex;
+	align-content: flex-start;
+    justify-content: space-between;    
 	margin: 0.375em 1.75em 1.75em 0;
 }
 .alignright {
-	float: right;
+    display: flex;
+	align-content: flex-end;
+    justify-content: space-between;    
 	margin: 0.375em 0 1.75em 1.75em;
 }
 .aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto 1.75em;
+	align-content: center;
+    justify-content: space-between;
+    text-align: center;
 }
 blockquote.alignleft {
 	margin: 0.3157894737em 1.4736842105em 1.473684211em 0;
@@ -557,8 +561,14 @@ p > video {
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-style: italic;
-	line-height: 1.6153846154;
-	padding-top: 0.5384615385em;
+	line-height: 1.6154;
+	padding: 0.5em;
+    margin: auto;
+}
+.wp-caption .wp-caption-text:before,
+.wp-caption .wp-caption-text:after{
+    clear: both;
+content: "";
 }
 .gallery-icon img {
 	margin: 0 auto;
@@ -569,8 +579,8 @@ p > video {
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-style: italic;
-	line-height: 1.6153846154;
-	padding-top: 0.5384615385em;
+	line-height: 1.6154;
+	padding-top: 0.5385em;
 }
 .gallery-columns-6 .gallery-caption,
 .gallery-columns-7 .gallery-caption,

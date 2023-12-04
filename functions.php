@@ -47,8 +47,10 @@ add_action( 'melody_excerpt_blank',  'melody_excerpt_blank_logo' );
 add_action( 'melody_blog_date',      'melody_blog_date_and_comment_count' );
 // A8
 add_action( 'inner_article_excerpt', 'melody_inner_article_excerpt' );
-
-
+// A9
+add_action( 'admin_enqueue_scripts', 'melody_tinymce_enqueue' );
+// A10
+add_action( 'melody_html_tips',      'melody_html_tips_content' );
 // ------------------------- Filters ---------------------------
 // ID#
 // F1
@@ -244,6 +246,7 @@ function melody_theme_widgets_init() {
 /**
  * Add files and theme registry for widgets
  */
+require get_template_directory() . '/inc/melody-tips-content.php';
 require get_template_directory() . '/inc/class-melody-twowide-widget.php';
 require get_template_directory() . '/inc/class-melody-threewide-widget.php';
 
@@ -266,7 +269,14 @@ function melody_theme_enqueue_styles()
 	wp_enqueue_style( 
         'melody', get_stylesheet_uri(), array(), MELODY_THEME_VER
     );
-
+	// mobile and back to top scripts
+	wp_enqueue_script(
+		'melody-toggle',
+		get_template_directory_uri() . '/rels/melody-menu-toggle.js',
+		array(),
+		MELODY_THEME_VER,
+		true
+	); 
 	wp_enqueue_script(
 		'melody-theme',
 		get_template_directory_uri() . '/rels/melody-frontend.js',
@@ -296,6 +306,7 @@ function melody_theme_enqueue_styles()
 		);
     }
 }
+
 /** #A6
  * Render logo to empty thumbnail container
  * 
@@ -403,4 +414,20 @@ function melody_theme_custom_logo() {
     }
         // Output sanitized in header to assure all html displays.
         return $output; //phpcs ignore:EscapeOutput
+} 
+
+/** #A9
+ * admin_enqueue_scripts
+ */
+
+function melody_tinymce_enqueue($hook) {
+	if ( 'widgets.php' != $hook ) {
+		return;
+	}	
+	wp_enqueue_style( 'widget-editor', 
+			get_stylesheet_directory_uri() . '/rels/widget-editor-style.css', 
+			array(), MELODY_THEME_VER, false  );
+	wp_enqueue_script( 'tinymce_widget',
+			get_template_directory_uri().'/rels/tinymce_widget.js',
+			array('jquery'), MELODY_THEME_VER, false  );
 } 

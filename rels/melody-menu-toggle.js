@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if ( width < 980 ) {
         let mode = sessionStorage.getItem('styl');
-        //document.body.classList.add('mode');
-        console.log(mode + "is"); 
+        //document.body.classList.add('anchormode');
+        //console.log(mode + "is"); 
         
         if (targetDiv.style.display !== "none") {
             targetDiv.style.display = mode;
@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 window.onclick = function(event){
-    console.log(event.target.className);
+    //console.log(event.target.className);
 
     if(event.target.className=='primary-anchor'){
         hideMenu();
-        console.log("found");
+        //console.log("found");
     }   
 }
 
