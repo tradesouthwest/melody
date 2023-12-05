@@ -28,9 +28,8 @@ get_header(); ?>
                 <?php 
                 /* Add widget section */
                 if ( is_active_sidebar( 'sidebar-landing' ) ) { ?>
-        
-                <?php dynamic_sidebar( 'sidebar-landing' ); ?>
-        
+                    <?php 
+                    dynamic_sidebar( 'sidebar-landing' ); ?>
                 <?php 
                 } ?>
             </div>

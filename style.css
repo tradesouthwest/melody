@@ -125,8 +125,8 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 1.485;
 }
 h1, h2, h3, h4, h5, h6{
-    margin: .25em 0;
-    padding:0;
+    padding-top: .444rem;
+    padding-bottom: inherit;
     color: #48494a
 }
   h1 {
@@ -307,7 +307,6 @@ article.post .wp-caption img{
 .melody-landing-wrapper .post-title{
     color:inherit;
 }
-
 .landing-attachment-container{
     margin-left: -15px;
     margin-right: -15px;
@@ -327,7 +326,6 @@ article.post .wp-caption img{
     background: #dff;
 }
 .melody-inner-content{
-    display: flex;
     margin-top: 2em;
     margin-bottom: 2em;
 }
@@ -341,6 +339,10 @@ article.post .wp-caption img{
     text-align: center;
     border-bottom: thin solid #ddd;
 } 
+.melody-landing-footing .textwidget{
+    line-height: 1.582;
+    color: #515355
+}
 .melody-html-widget-three,
 .melody-html-widget-one,
 .melody-html-widget-two{
@@ -348,7 +350,6 @@ article.post .wp-caption img{
     white-space: normal;
     display:   grid;
     width:     100%;
-    display: grid;
     grid-template-columns: 1fr;
     word-wrap: anywhere;
     margin-top: 2em;

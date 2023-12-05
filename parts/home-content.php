@@ -60,13 +60,13 @@ if ( have_posts() ) : ?>
     <?php endwhile; ?>
     
     <nav class="pagination-nav">
-        <p><span class="nav-previous alignleft">
+        <p><span class="nav-previous">
         <?php previous_posts_link( '<span class="prevpst-nav"> < </span>' ); ?>
         </span>
         <span class="algn-cntr">
             <?php do_action( 'flexline_check_pagination' ); ?>
         </span>
-        <span class="nav-next alignright">
+        <span class="nav-next">
             <?php next_posts_link( '<span class="nextpst-nav"> > </span>' ); ?>
         </span></p>
     </nav>
