@@ -213,6 +213,7 @@ article.post .wp-caption img{
     min-height: 5em;
     min-width: 8em;
     width: 25%;
+    justify-content: center;
 }
 .melody-excerpt-wrap{
     display: flex;
@@ -232,7 +233,6 @@ article.post .wp-caption img{
 }
 .blog .attachment-melody-excerpt{
     height: 150px;
-    margin-left: 1.088em;
 }
 .post-excerpt-heading,
 .inner-article-content{
@@ -307,6 +307,11 @@ article.post .wp-caption img{
 .melody-landing-wrapper .post-title{
     color:inherit;
 }
+
+.landing-attachment-container{
+    margin-left: -15px;
+    margin-right: -15px;
+}
 .landing-attachment-container img{
     height: 100%;
     width: 100%;
@@ -321,14 +326,21 @@ article.post .wp-caption img{
     padding-right: 2em;
     background: #dff;
 }
-.melody-landing-excerpt:after,
-.melody-landing-footing:after{
-    content: " ";
-    display: table;
-    clear: both;
-    height: 1px;
-    width: 100%;
+.melody-inner-content{
+    display: flex;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
+.melody-inner-content:before,
+.melody-inner-content:after{
+    content: "";
+    clear:both;
+}
+.melody-landing-footing .wide-container{
+    margin-top: 2em;
+    text-align: center;
+    border-bottom: thin solid #ddd;
+} 
 .melody-html-widget-three,
 .melody-html-widget-one,
 .melody-html-widget-two{
@@ -339,6 +351,7 @@ article.post .wp-caption img{
     display: grid;
     grid-template-columns: 1fr;
     word-wrap: anywhere;
+    margin-top: 2em;
 }
 
 /* ************************************************** IV - Navigation Elements */  
