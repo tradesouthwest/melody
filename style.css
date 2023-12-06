@@ -348,9 +348,10 @@ article.post .wp-caption img{
 .melody-html-widget-two{
     overflow: hidden;
     white-space: normal;
-    display:   grid;
+    display:   flex;
     width:     100%;
-    grid-template-columns: 1fr;
+    justify-content: space-around;
+    /*grid-template-columns: 1fr;*/
     word-wrap: anywhere;
     margin-top: 2em;
 }
@@ -622,7 +623,23 @@ content: "";
         margin: 0 auto;
     }
 } 
+@media screen and ( max-width: 599px ){
+    .melody-html-widget-three{
+        display: block;
+        width: 100%;
+    }
+    .melody-html-widget-three .mldywidget-first-child,
+    .melody-html-widget-three .mldywidget-second-child,
+    .melody-html-widget-three .mldywidget-third-child{
+        width: 100%;
+    }
+}
 
+@media screen and ( max-width: 768px ){
+    .melody-html-widget-two{
+        display: block;
+    }
+}
 @media screen and ( min-width: 980px ){
     .parent{
         grid-template-columns: 1fr minmax(0, 3fr);
