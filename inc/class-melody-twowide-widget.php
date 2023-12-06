@@ -97,11 +97,13 @@ class Melody_twowide_Widget extends WP_Widget {
         
         <?php add_thickbox(); ?>
 
-        <p><a href="#TB_inline?width=600&height=550&inlineId=modal-window-id" 
+        <p><a href="#TB_inline?width=740&height=800&inlineId=modal-window-id-2w" 
         class="button button-default thickbox"><?php esc_html_e( 'HTML Tips', 'melody'); ?></a></p>
 
-        <div id="modal-window-id" style="display:none;">
+        <div id="modal-window-id-2w" style="display:none;">
+
             <?php do_action( 'melody_html_tips' ); ?>
+            
         </div>
 
     </div>

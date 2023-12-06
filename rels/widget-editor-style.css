@@ -1,5 +1,14 @@
 textarea.melody-html-one {
   margin: 1em 0;
-  border: 2px solid #982;
+  border: 2px solid #b87333;
   padding: .5em;
+}
+.melody-tips-table{
+  table-layout: fixed;
+}
+.melody-tips-table tr td:last-child{
+  font-weight:bold;
+}
+.melody-tips-table tr:not(.throw) td{
+  border-bottom: thin dotted #ccc;
 }

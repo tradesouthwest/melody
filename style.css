@@ -111,7 +111,7 @@ body, div, main, article, section, header, footer, nav, aside, span {
 }
 .logo-top img{
     height: 100px;
-    margin-top: .4em;
+    margin-bottom: -1.67em;
 }
 
 .padded{
@@ -354,12 +354,24 @@ article.post .wp-caption img{
     word-wrap: anywhere;
     margin-top: 2em;
 }
-
+.melody-figtext{
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+.melody-figtext .melody-figtext-txt{
+    width: calc(66.6% - 16px);
+}
+.melody-figtext .melody-figtext-img{
+    width: calc(33.33% - 16px);
+}
 /* ************************************************** IV - Navigation Elements */  
 .bfi-date:before,
 .page-nav > li::before { 
     content: "";
-    border-color: transparent #6d6e6f;
+    border-color: transparent #7d7e7f;
     border-style: solid;
     border-width: 0.35em 0 0.35em 0.45em;
     display: block;

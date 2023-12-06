@@ -111,16 +111,18 @@ class Melody_Threewide_Widget extends WP_Widget {
             <textarea class="widefat" 
                 id="<?php echo $this->get_field_id( 'content_three' ); ?>" 
                 cols="25" rows="10" 
-                name="<?php echo $this->get_field_name( 'content_three' ); ?>"><?php echo wp_kses_post( $content_two ); ?></textarea>
+                name="<?php echo $this->get_field_name( 'content_three' ); ?>"><?php echo wp_kses_post( $content_three ); ?></textarea>
         </fieldset>
                
         <?php add_thickbox(); ?>
 
-        <p><a href="#TB_inline?width=600&height=550&inlineId=modal-window-id" 
+        <p><a href="#TB_inline?width=740&height=800&inlineId=modal-window-id-3w" 
         class="button button-default thickbox"><?php esc_html_e( 'HTML Tips', 'melody'); ?></a></p>
 
-        <div id="modal-window-id" style="display:none;">
+        <div id="modal-window-id-3w" style="display:none;">
+
             <?php do_action( 'melody_html_tips' ); ?>
+        
         </div>
 
     </div>
