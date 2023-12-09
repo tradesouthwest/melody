@@ -463,7 +463,7 @@ blockquote.aligncenter {
 .widget {
 	border-top: 2px solid transparent;
 	margin-bottom: 3.5em;
-	padding-top: 1.75em;
+	padding-top: 1em;
 }
 .widget.widget_search{
     border-top: 0;
@@ -521,6 +521,9 @@ blockquote.aligncenter {
 	border-color: #007acc;
 	color: #007acc;
 	outline: 0;
+}
+#primary-default.sidebar .widget:first-of-type{
+    padding-top: 0;
 }
 .sticky-post {
 	color: #686868;
@@ -639,6 +642,11 @@ content: "";
     .melody-html-widget-two{
         display: block;
     }
+    .second-child,
+    .third-child{
+        padding-top: 0;
+        margin-top: -1.5284em;
+    } 
 }
 @media screen and ( min-width: 980px ){
     .parent{
@@ -650,16 +658,17 @@ content: "";
         grid-template-columns: 1fr minmax(0, 3fr) 1fr;
     }
     .first-child{
-        margin-right: 1px;  
+        padding-right: 5px;  
     }
     .second-child{
-        margin-left: 1px;  
+        
         min-width: 290px;   
     }
     .third-child{
-        margin-left: 2px;
+        padding-right:0;
     }
     .third-child.padded{
+        padding-top: .675em;
         padding-left: 1.75em
     } 
 
@@ -686,10 +695,10 @@ content: "";
     }
     .inner-wide-header{
         flex-direction: row;
-        justify-content: center;
-        align-items: center;       
+        justify-content: center;   
         min-height: 1px;
         width: 100%;
+        padding-bottom: .444em;
     } 
     .inner-wide-header > .hsection{
         padding: 0 1em;
@@ -709,7 +718,14 @@ content: "";
         font-weight: 400;
     }
     .navbar-toggle{
-        display: none;
+        visibility: hidden;
+        margin-top: -1em;
+    }
+    .second-child .article-heading:not(.page-template-landing-page .article-heading){
+        margin-top: -1em;
+    }
+    .third-child .widget-title:first-of-type{
+        margin-top: 0.25em;
     }
     .blog .attachment-thumbnail.size-thumbnail{
         max-width: initial;
