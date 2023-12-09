@@ -30,7 +30,7 @@ if ( !defined ( 'MELODY_THEME_INC' ) ) { define ( 'MELODY_THEME_INC',
 	get_template_directory_uri() . '/inc/'); }
 // FAST LOADER References ( find @#id in DocBlocks )
 // ------------------------- Actions ---------------------------
-// ID#
+// ID#strip_shortcodes
 // A1
 add_action( 'after_setup_theme',     'melody_theme_setup' );
 // A2
@@ -381,8 +381,8 @@ function melody_inner_article_excerpt()
 	$reads   = sprintf( __( '%s', 'melody' ), 
 					    esc_html( $readm ? $readm : '...' ) 
 					);
- 	echo $excerpt . ' ' . '<a href="'.get_the_permalink().'" title="'. esc_attr($reads) .'">' 
-		 . esc_html( $reads )  . '</a>';
+ 	echo strip_shortcodes( $excerpt ) . ' ' . '<a href="'.get_the_permalink().'" 
+			title="'. esc_attr($reads) .'">' . esc_html( $reads )  . '</a>';
 	} else {
 		echo wp_trim_words( get_the_content(), absint( 50 ), '' ) 
 			 . ' ' . '<a href="'.get_the_permalink().'" title="read more">...</a>';
